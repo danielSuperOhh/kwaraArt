@@ -1,0 +1,167 @@
+.section1{
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgba(63,65,62,255); */
+    padding: 40px 10px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+    min-width: 300px;
+}
+
+.heroImg{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer{
+    width: 80%;
+}
+
+.imgContainer img{
+    height: 400px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.heroText{
+    width: 55%;
+    justify-content: center;
+}
+
+.heroText h1{
+    color: white;
+    font-size: 60px;
+    line-height: 150%;
+}
+
+.heroText p{
+    color: rgb(250, 250, 250, 0.7);
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.heroText button{
+    border: none;
+    outline: none;
+    padding: 9px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(63,65,62,255);
+    margin-top: 20px;
+}
+
+.socialLinks{
+    padding-top: 20px;
+    position: absolute;
+    right: 70px;
+    top: 60px;
+}
+
+.socialbox{
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: rgba(98,100,98,255);
+}
+
+.social-icon{
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon svg{
+    height: 25px;
+}
+
+.social-icon svg{
+    transition: .3s ease-in-out;
+}
+
+.social-icon svg:hover{
+    scale: 1.2;
+    transition: .3s ease-in-out;
+}
+
+.insidebox p{
+    color: #fafafa;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .section1{
+        position: relative;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    .heroImg{
+        width: 100%;
+        display: none;
+    }
+
+    .heroText{
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/heroart.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroText p{
+        color: rgb(250, 250, 250, 0.7);
+        max-width: 600px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 150%;
+    }    
+}
+
+@media (max-width: 700px) {
+    .socialLinks{
+        padding-top: 20px;
+        position: absolute;
+        right: 10px;
+        top: 65px;
+    }    
+}
+
+@media (max-width: 500px) {
+    .heroText{
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/herohero.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socialLinks{
+        right: 15px;
+    }    
+}
+
+@media (max-width: 450px){
+    .heroText h1{
+        font-size: 55px;
+    }
+}
+

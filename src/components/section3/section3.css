@@ -1,0 +1,108 @@
+.section3{
+    width: 100%;
+    height: auto;
+    background-color: rgba(76,79,77,255);
+    padding: 0px 30px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.area1{
+    display: flex;
+    gap: 130px;
+}
+
+.areaTextt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 5px;
+}
+
+.areaTextt h2{
+    max-width: 300px;
+    font-size: 30px;
+    color: #fffeff;
+}
+
+.areaTextt p{
+    max-width: 420px;
+    font-size: 13.4px;
+    color: rgb(255, 254, 255, 0.8);
+    font-weight: 300;
+    line-height: 160%;
+    padding-top: 15px;
+}
+
+.areaTextt button{
+    width: 110px;
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    margin-top: 30px;
+    font-size: 13.4px;
+    font-weight: 400;
+}
+
+.areaPictureImage{
+    height: 450px;
+    width: 420px;
+    background-color: plum;    
+}
+
+.area2{
+    display: flex;
+    gap: 130px;
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 950px) {
+    .area1, .area2{
+        gap: 60px;
+    }
+}
+
+@media (max-width: 900px){
+    .area1, .area2{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 540px){
+    .section3{
+        padding: 0px 10px;
+    }    
+
+    .areaTextt{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .areaTextt h2{
+        max-width: 100%;
+        padding-top: 20px;
+    }
+
+    .areaTextt p{
+        max-width: 100%;
+    }
+
+    .areaPicture{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 445px){
+    .areaPictureImage{
+        height: 450px;
+        width: 100%;
+        background-color: plum;    
+    }
+    
+}

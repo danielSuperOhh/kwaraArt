@@ -1,0 +1,180 @@
+.navBar{
+    width: 100%;
+    /* background-color: rgba(63,65,62,255); */
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 83px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.scrolled {
+    background-color: rgb(54, 55, 54, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button {
+    display: none; 
+    cursor: pointer;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon svg{
+    height: 45px;
+    width: 140px;
+}
+
+.logo p{
+    color: #fffefe;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-links{
+    display: flex;
+    gap: 48px;
+    transition: width 0.3s ease;
+}
+
+.activee p {
+    position: relative;
+    display: inline;
+    transition: width 0.3s ease;
+}
+  
+.activee p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(149,150,146,255);
+    transition: width 0.3s ease;
+}
+
+.activee:hover p::after {
+    width: auto; 
+    transition: width 0.3s ease;
+}
+
+.nav-links p{
+    color: #fffefe;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-links a{
+    text-decoration: none;
+}
+
+.contact {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contact:hover{
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-20px);
+    }
+    60%{
+        transform: translateY(-10px);
+    }
+}
+
+.contact p{
+    z-index: 3;
+}
+
+.contact img{
+    position: absolute;
+    top: -9px;
+    right: -35px;
+    height: 40px;
+    width: 120px;
+    z-index: -1;
+    stroke: #323230;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navBar{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 25px 25px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .logo{
+        text-align: center; 
+        flex: 1;     
+    }
+  
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 83px;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        background-color: rgb(54, 55, 54, 0.9);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px 20px;
+        transition: 0.4s ease-in-out;
+        text-align: center;
+        padding-top: 100px;
+        overflow-y: auto;
+    }
+
+    .nav-links p{
+        font-size: 20px;
+    }
+  
+    .nav-links.open {
+        display: flex; 
+    }
+
+    .close svg{
+        height: 30px;
+        width: 30px;
+        transform: rotate(45deg);
+    }
+
+    .bars svg{
+        height: 30px;
+        width: 28px;
+    }
+
+    .contact img{
+        display: none;
+    }    
+}
+  
